@@ -136,9 +136,19 @@ def triangular(n):
     return False
 
 def order(a, b, c):
-    vet = [a, b, c].sort()
-    return vet
-
+    if(a > b and b > c):
+        return (c, b, a)
+    elif(a > c and b < c):
+        return (b, c, a)
+    elif(a > b and a < c):
+        return (b, a, c)
+    elif(a < b and b < c):
+        return (a, b, c)
+    elif (a < b and a > c):
+        return (c, a, b)
+    else:
+        return (a, c, b)
+    
 
 if __name__ == '__main__':
     '''
@@ -186,9 +196,10 @@ if __name__ == '__main__':
 
     print(triangular(190))
 
-    print(order(4, 2, 9))
-    '''
     print(triangular(210))
+    '''
+    print(order(70, 20, 50))
+    
 
 
 
