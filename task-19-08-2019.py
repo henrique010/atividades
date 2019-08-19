@@ -1,3 +1,4 @@
+#Lista: estrutura sequencial indexada
 #Exercicio 1
 def printInverse(n, vet):
     i = n - 1 
@@ -40,6 +41,8 @@ def orderSequence(m, n, s1, s2):
 
     return result
 
+
+#Funções com listas
 #Exercicio 1
 def highestSum(n, vet):
     if(n != len(vet)):
@@ -74,6 +77,47 @@ def highestSum(n, vet):
     return (result, sum(result))
 
 
+#Exercicio 1
+def pertence(n, vet):
+    for i in range(0, len(vet)):
+        if(vet[i] == n):
+            return True
+        
+    return False
+
+#Exercicio 2
+def printWithoutRepetition2(n, vet):
+    result = []
+    for i in range(0, n):
+        if(i > 0):
+            
+            if(not pertence(vet[i], result)):
+                result.append(vet[i])
+        
+        else:
+            result.append(vet[i])
+
+    return result
+
+#Exercicio 3
+def index(n, vet):
+    for i in range(0, len(vet)):
+        if(vet[i] == n):
+            return i
+    
+    return None
+    
+
+#Exercicio 4
+def indexOccurrence(n, vet):
+    j = 0
+    for i in range(0, n):
+        if(index(vet[i], vet) != None):
+            print('O valor ', vet[i], ' ocorre ', vet.count(vet[i]), 'vez(es)')
+
+#Exercicio 5
+def sumElements(start, end, vet):
+    return sum(vet[start:end])
 
 if __name__ == '__main__':
 
@@ -85,6 +129,14 @@ if __name__ == '__main__':
 
     #print(highestSum(12, [5, -2, -2, -7, 3, 14, 10, -3, 9, -6, 4, 1]))
 
+    #pertence(False, [0.67, 'Ola', 9, True, False, 'a'])
 
+    #print(printWithoutRepetition2(5, [1, 2, 3, 2, 5]))
+
+    #print(index(10, [1, 2, 5, 7, 8, 9, 3]))
+
+    #indexOccurrence(5, [1, 2, 5, 2, 3])
+
+    print(sumElements(1, 4, [1, 4, 7, 5, 2, 9]))
 
 
