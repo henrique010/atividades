@@ -42,8 +42,7 @@ def orderSequence(m, n, s1, s2):
     return result
 
 
-#Funções com listas
-#Exercicio 1
+#Exercicio 4
 def highestSum(n, vet):
     if(n != len(vet)):
         return 'ERRO: o valor de n é diferente do tamanho da sequencia'
@@ -77,6 +76,7 @@ def highestSum(n, vet):
     return (result, sum(result))
 
 
+#Funções com listas
 #Exercicio 1
 def pertence(n, vet):
     for i in range(0, len(vet)):
